@@ -31,7 +31,46 @@ let btnNavbar = document.getElementsByClassName("navbar-toggler")[0];
 let navbarEl = document.getElementById("navbarHeader");
 
 function removeCollapse() {
-	   navbarEl.classList.toggle("collapse");
+	navbarEl.classList.toggle("collapse");
 };
 
 btnNavbar.addEventListener('click', removeCollapse);
+
+
+// Fonctionnalité 3 :
+
+let editBtn = document.getElementsByClassName("btn")[3];
+let editText = document.getElementsByClassName("card-text")[0];
+
+
+function changeText() {
+
+	editText.style.color = 'red';
+}
+editBtn.addEventListener('click', changeText);
+
+
+// Fonctionnalité 4 :
+
+
+
+let editCard = document.getElementsByClassName("btn")[5];
+console.log(editCard);
+let cardText = document.getElementsByClassName("card-text")[1];
+console.log(cardText);
+
+
+
+function changeColor() {
+	
+	if (cardText.style.color == 'green') {
+		cardText.style.color = '';
+	} else {
+		cardText.style.color = 'green'
+	}
+};
+
+editCard.addEventListener('click', changeColor);
+
+
+// Fonctionnalité 5 :
