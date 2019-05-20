@@ -114,17 +114,32 @@ onMouse();
 // Fonctionnalité 7 :
 
 let greyBtn = document.getElementsByClassName("btn-secondary")[0];
+
+function insertCardBefore() {
+
 let cardsContainer = document.getElementsByClassName("row")[1];
 
-let cards = document.getElementsByClassName("col-md-4");
+let cards = document.querySelectorAll(".card");
 
-let lastCard = cards[5];
-
-
-function inserCard() {
-cardsContainer.insertAdjacentElement('afterbegin', lastCard);
+let lastCard = cardsContainer.lastChild;
+cardsContainer.insertBefore(lastCard, cardsContainer.firstChild);
 };
 
-greyBtn.addEventListener('click', inserCard );
+greyBtn.addEventListener('click', insertCardBefore);
 
 
+
+// Fonctionnalité 8 :
+
+let cardsPannel = document.getElementsByClassName("row")[1];;
+let blueBtn = document.getElementsByClassName("btn-primary")[0];
+
+function inserCardAfter(e) {
+	e.preventDefault();
+	let firstCard = cardsPannel.firstChild;	
+	cardsPannel.appendChild(firstCard);
+	
+
+};
+
+blueBtn.addEventListener('click', inserCardAfter, true);
