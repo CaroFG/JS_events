@@ -108,6 +108,23 @@ function onMouse() {
 	
 };
 
-
 onMouse();
+
+
+// Fonctionnalité 7 :
+
+let greyBtn = document.getElementsByClassName("btn-secondary")[0];
+let cardsContainer = document.getElementsByClassName("row")[1];
+
+let cards = document.getElementsByClassName("col-md-4");
+
+let lastCard = cards[5];
+
+
+function inserCard() {
+cardsContainer.insertAdjacentElement('afterbegin', lastCard);
+};
+
+greyBtn.addEventListener('click', inserCard );
+
 
