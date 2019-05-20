@@ -24,3 +24,14 @@ myFooter.addEventListener("click", onClickNumber);
 
 
 // Fonctionnalité 2 :
+
+
+let btnNavbar = document.getElementsByClassName("navbar-toggler")[0];
+
+let navbarEl = document.getElementById("navbarHeader");
+
+function removeCollapse() {
+	   navbarEl.classList.toggle("collapse");
+};
+
+btnNavbar.addEventListener('click', removeCollapse);
