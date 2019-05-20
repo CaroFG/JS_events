@@ -74,3 +74,16 @@ editCard.addEventListener('click', changeColor);
 
 
 // Fonctionnalité 5 :
+
+let navbar = document.getElementsByClassName("navbar")[0];
+let head = document.getElementsByTagName("head")[0];
+let headLink = head.querySelectorAll("link")[0];
+
+
+function removeLink() {
+	if (headLink.disabled == true){
+		headLink.disabled = false;
+	} else {headLink.disabled = true}
+};
+
+navbar.addEventListener('dblclick', removeLink);
