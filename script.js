@@ -87,3 +87,27 @@ function removeLink() {
 };
 
 navbar.addEventListener('dblclick', removeLink);
+
+
+// Fonctionnalité 6 :
+
+function onMouse() {
+	let myCards = document.querySelectorAll(".card");
+	myCards.forEach(card => {
+		let buttonSuccess = card.getElementsByClassName("btn-success")[0];
+		
+		function reduceCard(){
+			card.querySelectorAll("p")[0].classList.toggle("d-none");
+			if (card.style.width == '20%'){
+				card.style.width = '100%';
+				card.style.heigth = 'auto';
+			} else { card.style.width = '20%'}
+		};
+	buttonSuccess.addEventListener('mouseover', reduceCard);
+	});
+	
+};
+
+
+onMouse();
+
